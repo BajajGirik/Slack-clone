@@ -1,6 +1,7 @@
 import { Avatar } from '@material-ui/core';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import SearchIcon from '@material-ui/icons/Search';
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import React from 'react'
 import styled from "styled-components";
 
@@ -17,7 +18,9 @@ function Header() {
                 <input placeholder="Search" />
             </HeaderMid>
 
-            <HeaderRight></HeaderRight>
+            <HeaderRight>
+                <HelpOutlineIcon />
+            </HeaderRight>
         </HeaderContainer>
     )
 }
@@ -56,8 +59,7 @@ const HeaderMid = styled.div`
     background-color: #421f44;
     flex: 0.4;
     display:flex;
-    text-align: center;
-    padding: 0 50px;
+    justify-content: center;
     border: solid 1px gray;
     border-radius: 7px;
 
@@ -70,6 +72,9 @@ const HeaderMid = styled.div`
         color: white;
     }
 `;
+
 const HeaderRight = styled.div`
+    flex: 0.3;
     display: flex;
+    justify-content: flex-end;
 `;
