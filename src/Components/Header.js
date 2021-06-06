@@ -42,3 +42,34 @@ const HeaderLeft = styled.div`
     justify-content: space-between;
     margin: 0.7em 1.2em;
 `;
+
+const HeaderAvatar = styled(Avatar)`
+    cursor: pointer;
+
+    :hover {
+        opacity: 0.8;
+    }
+`;
+
+const HeaderMid = styled.div`
+    color: gray;
+    background-color: #421f44;
+    flex: 0.4;
+    display:flex;
+    text-align: center;
+    padding: 0 50px;
+    border: solid 1px gray;
+    border-radius: 7px;
+
+    > input {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        min-width: 30vw;
+        text-align: center;
+        color: white;
+    }
+`;
+const HeaderRight = styled.div`
+    display: flex;
+`;
