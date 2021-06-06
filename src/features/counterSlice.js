@@ -2,7 +2,9 @@ import { createSlice } from '@reduxjs/toolkit';
 
 export const counterSlice = createSlice({
   name: 'counter',
-  initialState,
+  initialState: {
+    value: 0
+  },
   // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
     increment: (state) => {
@@ -34,11 +36,5 @@ export const selectCount = (state) => state.counter.value;
 
 // We can also write thunks by hand, which may contain both sync and async logic.
 // Here's an example of conditionally dispatching actions based on current state.
-export const incrementIfOdd = (amount) => (dispatch, getState) => {
-  const currentValue = selectCount(getState());
-  if (currentValue % 2 === 1) {
-    dispatch(incrementByAmount(amount));
-  }
-};
 
 export default counterSlice.reducer;
