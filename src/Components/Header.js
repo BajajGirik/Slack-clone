@@ -77,4 +77,5 @@ const HeaderRight = styled.div`
     flex: 0.3;
     display: flex;
     justify-content: flex-end;
+    margin: 0.7em 1.2em;
 `;
