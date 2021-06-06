@@ -9,6 +9,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --slack-color: #3f0f40;
+  overflow: hidden;
 }
 
 code {
