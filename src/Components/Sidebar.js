@@ -46,7 +46,6 @@ function Sidebar() {
                     key={doc.id}
                     id={doc.id}
                     title={doc.data().name}
-                    aco
                 />
             ))}
 
