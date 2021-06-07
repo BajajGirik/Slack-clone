@@ -58,5 +58,11 @@ const SidebarText = styled.div`
         font-size: 0.9em;
         font-weight: 400;
     }
+
+    >h3 > .MuiSvgIcon-root {
+        color: green;
+        font-size: 1em;
+        margin-right: 2px;
+    }
 `;
 
