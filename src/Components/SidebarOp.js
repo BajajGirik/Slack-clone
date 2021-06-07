@@ -21,9 +21,9 @@ function SidebarOp({ Icon, title, aco }) {
                     <h3>{title}</h3>
                 </>
             ) : (
-                    <>
+                    <SidebarOpChannel>
                         <span>#</span> {title}
-                    </>
+                    </SidebarOpChannel>
             )}
        </SidebarOpContainer>
     )
@@ -52,5 +52,14 @@ const SidebarOpContainer = styled.div`
         font-weight: 500;
     }
      
+    >h3 > span {
+        padding: 15px;
+    }
      /* style span */
+`;
+
+const SidebarOpChannel = styled.h3`
+    font-size: 1.1em;
+    font-weight: 300;
+    padding: 1em 0em;
 `;
