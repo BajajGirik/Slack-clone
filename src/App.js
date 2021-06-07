@@ -1,16 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import './App.css';
 import Header from './Components/Header';
 import Sidebar from './Components/Sidebar';
+import Chat from './Components/Chat'
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <AppBody>
-        <Sidebar />
-      </AppBody>
+      <Router>
+        <Header />
+        <AppBody>
+          <Sidebar />
+          <Switch>
+            <Route path="/">
+              <Chat />
+            </Route>
+          </Switch>
+        </AppBody>
+      </Router>
     </div>
   );
 }
