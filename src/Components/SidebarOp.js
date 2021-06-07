@@ -1,8 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
+import { db } from '../firebase';
 
 function SidebarOp({ Icon, title, aco }) {
-    const addChannel = () => { }
+    const addChannel = () => {
+        const chName = prompt("Enter the channel name");
+        if (chName) {
+            db.collection("rooms").add({
+                name: chName
+            });
+        }
+    }
     const selectChannel = () => { }
 
     return (
