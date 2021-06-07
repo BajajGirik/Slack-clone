@@ -17,4 +17,7 @@ function App() {
 
 export default App;
 
-const AppBody = styled.div``;
+const AppBody = styled.div`
+  height: 100vh;
+  display: flex;
+`;
