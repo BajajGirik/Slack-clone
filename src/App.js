@@ -10,15 +10,17 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
-        <AppBody>
-          <Sidebar />
-          <Switch>
-            <Route path="/">
-              <Chat />
-            </Route>
-          </Switch>
-        </AppBody>
+        <>
+          <Header />
+          <AppBody>
+            <Sidebar />
+            <Switch>
+              <Route path="/" exact>
+                <Chat />
+              </Route>
+            </Switch>
+          </AppBody>
+        </>
       </Router>
     </div>
   );
