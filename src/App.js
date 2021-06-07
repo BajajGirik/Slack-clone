@@ -10,7 +10,6 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <>
           <Header />
           <AppBody>
             <Sidebar />
@@ -20,7 +19,6 @@ function App() {
               </Route>
             </Switch>
           </AppBody>
-        </>
       </Router>
     </div>
   );
