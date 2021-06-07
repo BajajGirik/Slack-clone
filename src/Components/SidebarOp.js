@@ -1,9 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function SidebarOp({Icon, title}) {
+function SidebarOp({ Icon, title, aco }) {
+    const addChannel = () => { }
+    const selectChannel = () => { }
+
     return (
-        <SidebarOpContainer>
+        <SidebarOpContainer onClick={aco ? addChannel : selectChannel }>
             {Icon ? (
                 <>
                     <Icon />
@@ -41,4 +44,5 @@ const SidebarOpContainer = styled.div`
         font-weight: 500;
     }
      
+     /* style span */
 `;
