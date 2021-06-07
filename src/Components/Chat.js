@@ -39,5 +39,22 @@ const Header = styled.div`
     border-bottom: solid 1px lightgray;
 `;
 
-const HeaderLeft = styled.div``;
-const HeaderRight = styled.div``;
+const HeaderLeft = styled.div`
+    display: flex;
+    align-items: center;
+
+    >h4 {
+        text-transform: lowercase;
+        margin-right: 5px;
+    }
+`;
+const HeaderRight = styled.div`
+    >p {
+        display: flex;
+        align-items: center;
+    }
+
+    >p > .MuiSvgIcon-root {
+        margin-right: 5px;
+    }
+`;
