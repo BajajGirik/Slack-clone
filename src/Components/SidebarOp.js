@@ -11,7 +11,8 @@ function SidebarOp({Icon, title}) {
                 </>
             ) : (
                     <>
-                        </>
+                        <span>#</span> {title}
+                    </>
             )}
        </SidebarOpContainer>
     )
@@ -31,4 +32,13 @@ const SidebarOpContainer = styled.div`
     align-items: center;
     cursor: pointer;
 
+    :hover {
+        opacity: 0.9;
+        background-color: #340e36;
+    }
+
+    >h3 {
+        font-weight: 500;
+    }
+     
 `;
