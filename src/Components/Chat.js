@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import StarBorderOutlinedIcon from '@material-ui/icons/StarBorderOutlined'
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined'
+import ChatInput from './ChatInput'
 
 function Chat() {
     return (
@@ -19,6 +20,9 @@ function Chat() {
                     </p>
                 </HeaderRight>
             </Header>
+            <ChatMessages></ChatMessages>
+
+            <ChatInput />
         </ChatContainer>
     )
 }
@@ -58,3 +62,5 @@ const HeaderRight = styled.div`
         margin-right: 5px;
     }
 `;
+
+const ChatMessages = styled.div``;
