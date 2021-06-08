@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 function Login() {
     const signIn = e => {
-        
+
     }
 
     return (
@@ -12,7 +12,7 @@ function Login() {
             <LoginMid>
                 <img src="https://yt3.ggpht.com/ytc/AAUvwnhZtcTvJEkvuZMdTzjhPLvZGIQSo9nel4btx7j9rg=s900-c-k-c0x00ffffff-no-rj" alt="" />
                 <h2>Slack</h2>
-                <Button type='submit' onClick={signIn}>Sign In</Button>
+                <Button onClick={signIn}>Sign In</Button>
             </LoginMid>
         </LoginContainer>
     )
@@ -43,6 +43,9 @@ const LoginMid = styled.div`
 
     >button {
         margin-top: 2em;
+        padding: 0.7em 1.7em;
+        background-color: #0a8d48 !important;
+        color: white;
     }
 
 `;
