@@ -5,7 +5,7 @@ import { auth, db } from '../firebase';
 import firebase from 'firebase'
 import { useAuthState } from 'react-firebase-hooks/auth';
 
-function ChatInput({channelName, channelId, chatRef }) {
+function ChatInput({channelName, channelId }) {
     const [input, setInput] = useState('');
     const [user] = useAuthState(auth);
 
@@ -29,9 +29,6 @@ function ChatInput({channelName, channelId, chatRef }) {
 
         setInput('');
         
-        chatRef.current.scrollIntoView({
-            behavior: 'smooth'
-        });
     }
 
     return (

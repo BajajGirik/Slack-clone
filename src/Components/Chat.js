@@ -48,6 +48,7 @@ function Chat() {
                     const { message, timestamp, user, userImage } = doc.data();
                     return (
                         <Message
+                            chatRef={chatRef}
                             key={doc.id}
                             message={message}
                             timestamp={timestamp}
@@ -60,7 +61,6 @@ function Chat() {
                 </ChatMessages>
 
                 <ChatInput
-                chatRef={chatRef}
                 channelName={roomDetails?.data().name}
                 channelId={roomId}
                 />
@@ -107,7 +107,7 @@ const HeaderRight = styled.div`
 `;
 
 const ChatBottom = styled.div`
-    padding-bottom: 180px;
+    padding-bottom: 90px;
 `;
 
 const ChatMessages = styled.div``;

@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components';
 
-function Message({ message, timestamp, user, userImage }) {
+function Message({ message, timestamp, user, userImage, chatRef }) {
+    
+    useEffect(() => {
+        chatRef?.current?.scrollIntoView({
+            behavior: 'smooth',
+        });
+    });
     return (
         <MessageContainer>
             <img src={userImage} alt='' />
