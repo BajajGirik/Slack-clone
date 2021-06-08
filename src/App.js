@@ -16,9 +16,9 @@ function App() {
             <LoadMid>
                 <img src="https://yt3.ggpht.com/ytc/AAUvwnhZtcTvJEkvuZMdTzjhPLvZGIQSo9nel4btx7j9rg=s900-c-k-c0x00ffffff-no-rj" alt="" />
                 <h2>Slack</h2>
-                <span>.</span>
-                <span>.</span>
-                <span>.</span>
+                <span></span>
+                <span></span>
+                <span></span>
             </LoadMid>
       </LoadContainer>
     );
@@ -79,21 +79,23 @@ const LoadMid = styled.div`
       object-fit: contain;
       height: 100px;
     }
+
   > span {
-    opacity: 0;
-    font-size: 2em;
-    font-weight: 900;
-    margin: 0.5em;
-    color: purple;
+    display: inline-block;
+    background-color: black;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0.4em;
   }
 
   > span:nth-of-type(1){
-    animation: translate 1s ease-in infinite forwards;
+    /* animation: translate 2s ease-in-out infinite; */
   }
   > span:nth-of-type(2){
-    animation: translate 1s ease-in 0.5s infinite forwards;
+    /* animation: translate 2s ease-in-out 0.4s infinite; */
   }
   > span:nth-of-type(3){
-    animation: translate 1s ease-in 1s infinite forwards;
+    animation: translate 2s ease-in-out 0.8s infinite;
   }
 `;
