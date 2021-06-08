@@ -18,7 +18,7 @@ function Chat() {
     const [roomMessages] = useCollection(
         roomId && db.collection('roooms').doc(roomId).collection('messages').orderBy('timestamp', 'asc')
     );
-    
+
     return (
         <ChatContainer>
             <Header>
@@ -36,7 +36,10 @@ function Chat() {
             </Header>
             <ChatMessages></ChatMessages>
 
-            <ChatInput channelId={roomId}/>
+            <ChatInput
+                channelName={roomDetails?.data().name}
+                channelId={roomId}
+            />
         </ChatContainer>
     )
 }
