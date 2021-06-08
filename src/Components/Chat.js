@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import StarBorderOutlinedIcon from '@material-ui/icons/StarBorderOutlined'
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined'
@@ -11,14 +11,20 @@ import Message from './Message'
 
 function Chat() {
     const roomId = useSelector(selectRoomID);
-    
-    const [roomDetails] = useDocument(
+    const chatRef = useRef(null);
+    const [roomDetails, loading] = useDocument(
         roomId && db.collection('rooms').doc(roomId)
     );
 
     const [roomMessages] = useCollection(
         roomId && db.collection('roooms').doc(roomId).collection('messages').orderBy('timestamp', 'asc')
     );
+
+    useEffect(() => {
+        chatRef?.current?.scrollIntoView({
+            behaviour: 'smooth'
+        });
+    }, [roomId, loading]);
 
     return (
         <ChatContainer>
@@ -48,6 +54,7 @@ function Chat() {
                         userImage={userImage}
                     />
                 })}
+                <ChatBottom ref={useRef}></ChatBottom>
             </ChatMessages>
 
             <ChatInput
@@ -92,6 +99,10 @@ const HeaderRight = styled.div`
     >p > .MuiSvgIcon-root {
         margin-right: 5px;
     }
+`;
+
+const ChatBottom = styled.div`
+    padding: 200px;
 `;
 
 const ChatMessages = styled.div``;

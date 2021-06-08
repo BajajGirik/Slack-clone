@@ -33,4 +33,10 @@ const MessageContainer = styled.div`
 const MessageInfo = styled.div`
     padding-left: 10px;
 
+    >h4 >span {
+        color: gray;
+        font-size: 0.8em;
+        margin-left: 4px;
+        font-weight: 300;
+    }
 `;
