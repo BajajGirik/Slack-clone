@@ -10,6 +10,19 @@ import Login from './Components/Login';
 
 function App() {
   const [user, loading] = useAuthState(auth);
+  if (loading) {
+    return (
+      <LoadContainer>
+            <LoadMid>
+                <img src="https://yt3.ggpht.com/ytc/AAUvwnhZtcTvJEkvuZMdTzjhPLvZGIQSo9nel4btx7j9rg=s900-c-k-c0x00ffffff-no-rj" alt="" />
+                <h2>Slack</h2>
+                <span>.</span>
+                <span>.</span>
+                <span>.</span>
+            </LoadMid>
+      </LoadContainer>
+    );
+  }
 
   return (
     <div className="App">
@@ -41,3 +54,6 @@ const AppBody = styled.div`
   height: 100vh;
   display: flex;
 `;
+
+const LoadContainer = styled.div``;
+const LoadMid = styled.div``;
