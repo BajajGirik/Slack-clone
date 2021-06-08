@@ -6,6 +6,7 @@ import firebase from 'firebase'
 
 function ChatInput({channelName, channelId }) {
     const [input, setInput] = useState('');
+    console.log(channelId);
 
     const changeIt = e => {
         setInput(e.target.value);
