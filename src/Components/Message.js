@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 
-function Message({message, timestamp, user, userImage}) {
+function Message({ message, timestamp, user, userImage }) {
     return (
         <MessageContainer>
             <img src={userImage} alt='' />
@@ -35,7 +35,7 @@ const MessageInfo = styled.div`
 
     >h4 >span {
         color: gray;
-        font-size: 0.8em;
+        font-size: 10px;
         margin-left: 4px;
         font-weight: 300;
     }
