@@ -9,8 +9,8 @@ function Message({ message, timestamp, user, userImage }) {
                 <h4>
                     {user} {' '}
                     <span>{new Date(timestamp?.toDate()).toLocaleTimeString()}</span>
-                    <p>{message}</p>
                 </h4>
+                    <p>{message}</p>
             </MessageInfo>
         </MessageContainer>
     )
