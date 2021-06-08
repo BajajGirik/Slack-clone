@@ -22,7 +22,7 @@ function Chat() {
 
     useEffect(() => {
         chatRef?.current?.scrollIntoView({
-            behaviour: 'smooth'
+            behavior: 'smooth',
         });
     }, [roomId, loading]);
 
@@ -107,7 +107,7 @@ const HeaderRight = styled.div`
 `;
 
 const ChatBottom = styled.div`
-    padding: 200px;
+    padding-bottom: 180px;
 `;
 
 const ChatMessages = styled.div``;

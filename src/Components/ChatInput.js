@@ -27,11 +27,11 @@ function ChatInput({channelName, channelId, chatRef }) {
             userImage:  user.photoURL
         });
 
-        chatRef?.current.scrollIntoView({
-            behaviour: 'smooth'
-        });
-
         setInput('');
+        
+        chatRef.current.scrollIntoView({
+            behavior: 'smooth'
+        });
     }
 
     return (
