@@ -10,7 +10,7 @@ import Login from './Components/Login';
 
 function App() {
   const [user, loading] = useAuthState(auth);
-  if (true) {
+  if (loading) {
     return (
       <LoadContainer>
             <LoadMid>
@@ -82,7 +82,7 @@ const LoadMid = styled.div`
 
   > span {
     display: inline-block;
-    background-color: black;
+    background-color: purple;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -90,12 +90,12 @@ const LoadMid = styled.div`
   }
 
   > span:nth-of-type(1){
-    /* animation: translate 2s ease-in-out infinite; */
+    animation: translate 2s ease-in-out infinite;
   }
   > span:nth-of-type(2){
-    /* animation: translate 2s ease-in-out 0.4s infinite; */
+    animation: translate 2s ease-in-out 0.5s infinite;
   }
   > span:nth-of-type(3){
-    animation: translate 2s ease-in-out 0.8s infinite;
+    animation: translate 2s ease-in-out 1s infinite;
   }
 `;
