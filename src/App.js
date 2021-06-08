@@ -55,5 +55,42 @@ const AppBody = styled.div`
   display: flex;
 `;
 
-const LoadContainer = styled.div``;
-const LoadMid = styled.div``;
+const LoadContainer = styled.div`
+  background-color: #f8f8f8;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const LoadMid = styled.div`
+  text-align: center;
+  background-color: #fff;
+  padding: 10em;
+  border-radius: 1em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+  0 1px 2px rgba(0, 0, 0, 0.24);
+
+  > img {
+      object-fit: contain;
+      height: 100px;
+    }
+
+  > span:nth-of-type(1){
+    animation: translate 1s ease-in infinite;
+  }
+
+  @keyframes translate {
+    0% {
+
+    }
+
+    50% {
+
+    }
+
+    100% {
+      
+    }
+  }
+`;
