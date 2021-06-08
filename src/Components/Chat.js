@@ -3,8 +3,11 @@ import styled from 'styled-components'
 import StarBorderOutlinedIcon from '@material-ui/icons/StarBorderOutlined'
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined'
 import ChatInput from './ChatInput'
+import { useSelector } from 'react-redux'
+import { selectRoomID } from '../features/appSlice'
 
 function Chat() {
+    const roomId = useSelector(selectRoomID);
     return (
         <ChatContainer>
             <Header>
@@ -22,7 +25,7 @@ function Chat() {
             </Header>
             <ChatMessages></ChatMessages>
 
-            <ChatInput />
+            <ChatInput channelId={roomId}/>
         </ChatContainer>
     )
 }

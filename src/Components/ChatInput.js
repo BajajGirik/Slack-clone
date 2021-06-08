@@ -6,7 +6,7 @@ import firebase from 'firebase'
 
 function ChatInput({channelName, channelId }) {
     const [input, setInput] = useState('');
-    
+
     const changeIt = e => {
         setInput(e.target.value);
     }
@@ -20,8 +20,12 @@ function ChatInput({channelName, channelId }) {
 
         db.collection('rooms').doc(channelId).collection('messages').add({
             message: input,
-            timestamp: firebase.firestore.FieldValue.serverTimestamp()
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+            user: 'admin',
+            userImage:  ''
         });
+
+        setInput('');
     }
 
     return (
