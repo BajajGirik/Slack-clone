@@ -33,9 +33,9 @@ function ChatInput({channelName, channelId }) {
 
     return (
         <ChatInputContainer>
-            <form>
+            <form onSubmit={sendMessage}>
                 <input value={input} onChange={changeIt} placeholder={`Message #${channelName}`} />
-                <Button type='submit' onClick={sendMessage} hidden>Send</Button>
+                <Button type='submit' hidden>Send</Button>
             </form>    
         </ChatInputContainer>
     )

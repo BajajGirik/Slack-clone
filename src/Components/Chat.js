@@ -21,9 +21,7 @@ function Chat() {
     );
 
     useEffect(() => {
-        chatRef?.current?.scrollIntoView({
-            behavior: 'smooth',
-        });
+        chatRef?.current?.scrollIntoView();
     }, [roomId, loading]);
 
     return (
@@ -76,6 +74,7 @@ const ChatContainer = styled.div`
     flex: 0.7;
     flex-grow: 1;
     overflow-y: scroll;
+    scroll-behavior: smooth;
     margin-top: 80px;
 `;
 
