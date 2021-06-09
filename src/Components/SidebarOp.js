@@ -65,11 +65,26 @@ const SidebarOpContainer = styled.div`
     >h3 > span {
         padding: 15px;
     }
-     /* style span */
+   
+    @media screen and (max-width: 877px) {
+        padding: 0;
+        justify-content: center;
+        > h3 {
+            display: none;
+        }
+    }
 `;
 
 const SidebarOpChannel = styled.h3`
     font-size: 1.1em;
     font-weight: 300;
     padding: 1em 0em;
+
+    @media screen and (max-width: 877px) {
+        display: flex !important;
+        align-items: center;
+        > span {
+            padding: 0px !important;
+        }
+    }
 `;
