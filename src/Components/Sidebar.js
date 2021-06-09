@@ -24,7 +24,7 @@ function Sidebar() {
         <SidebarContainer>
             <SidebarTop>
                 <SidebarText>
-                    <h2>USICT HQ</h2>
+                    <h2>USICT <span>HQ</span></h2>
                     <h3><FiberManualRecordIcon /> {user.displayName}</h3>
                 </SidebarText>
                 <CreateIcon />
@@ -60,6 +60,7 @@ export default Sidebar
 const SidebarContainer = styled.div`
     color: white;
     background-color: var(--slack-color);
+    overflow-y: scroll;
     flex: 0.3;
     margin-top: 72.38px;
     max-width: 260px;
@@ -71,7 +72,7 @@ const SidebarContainer = styled.div`
     }
 
     @media screen and (max-width: 877px) {
-        flex: 0.1;
+        flex: initial;
     }
 `;
 
@@ -120,6 +121,10 @@ const SidebarText = styled.div`
     }
 
     @media screen and (max-width: 877px) {
+        >h2 > span {
+            display: block;
+        }
+        
         > h2 {
             text-align: center;
         }
