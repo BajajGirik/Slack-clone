@@ -56,6 +56,13 @@ const HeaderLeft = styled.div`
     align-items: center;
     justify-content: space-between;
     margin: 0.7em 1.2em;
+
+    @media screen and (max-width: 877px) {
+        margin-left: 0.7em;
+        > :nth-child(2) {
+            display: none;
+        }
+    }
 `;
 
 const HeaderAvatar = styled(Avatar)`
